@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL Rate Query</title>
+    <link rel="stylesheet" href="/css/Rate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DHL Rate Query</h1>
+        <form id="rateForm">
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" required>
+
+            <label for="originCountryCode">Origin Country Code:</label>
+            <input type="text" id="originCountryCode" name="originCountryCode" required>
+
+            <label for="originCityName">Origin City Name:</label>
+            <input type="text" id="originCityName" name="originCityName" required>
+
+            <label for="destinationCountryCode">Destination Country Code:</label>
+            <input type="text" id="destinationCountryCode" name="destinationCountryCode" required>
+
+            <label for="destinationCityName">Destination City Name:</label>
+            <input type="text" id="destinationCityName" name="destinationCityName" required>
+
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="length">Length:</label>
+            <input type="text" id="length" name="length" required>
+
+            <label for="width">Width:</label>
+            <input type="text" id="width" name="width" required>
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" required>
+
+            <label for="plannedShippingDate">Planned Shipping Date:</label>
+            <input type="datetime-local" id="plannedShippingDate" name="plannedShippingDate" required>
+
+            <div class="centered-checkbox">
+                <label for="isCustomsDeclarable">Duties and Taxes:</label>
+                <input type="checkbox" id="isCustomsDeclarable" name="isCustomsDeclarable">
+            </div>
+
+            <label for="unitOfMeasurement">Unit of Measurement:</label>
+            <select id="unitOfMeasurement" name="unitOfMeasurement" required>
+                <option value="metric">Metric</option>
+                <option value="imperial">Imperial</option>
+            </select>
+
+                <button type="submit">Get Rates</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/js/Rate.js"></script>
+</body>
+</html>
